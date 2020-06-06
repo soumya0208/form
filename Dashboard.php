@@ -1,6 +1,6 @@
 <?php
 
-    $con = mysqli_connect("localhost", "root", "", "factory");
+    $con = mysqli_connect("localhost", "root", "", "stackhack");
     session_start();
  ?>
  
@@ -42,6 +42,6 @@
             <h2>Join Date:<?php echo($_SESSION['factory']['join_date']."&nbsp"); ?></h2>
         </div>
 
-        
+        <a href="updatepassword.php">If you want you can update your password</a>
      </body>
 </html>

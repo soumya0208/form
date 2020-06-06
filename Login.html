@@ -1,0 +1,204 @@
+<html>
+
+<head>
+    <title> Staff Management Portal </title>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+
+    <style>
+        h1 {
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        #d1 {
+            height: 100px;
+            width: auto;
+            background-color: blueviolet;
+            padding-top: 10px;
+            color: antiquewhite;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+        }
+
+        #d3
+        {
+            height: 440px;
+            width: 800px;
+            background-color: darkgoldenrod;
+            float: right;
+            color: white;
+            padding-top: 6px;
+            border-bottom-right-radius: 30px;
+        }
+
+        #d4
+        {
+            height: 436px;
+            width: 600px;
+            background-color: chocolate;
+            color: white;
+            padding-top: 10px;
+            border-bottom-left-radius: 30px;
+        }
+
+        #box1
+        {
+            text-align: center;
+            border-style:none;
+            background-color: white;
+            height: 35px;
+            width: 250px;
+            border-radius: 25px;
+            margin-top: 10px;
+            margin-left: 5px;
+        }
+        input[type='submit']
+        {
+            height: 35px;
+            width: 150px;
+            margin-top: 10px;
+            margin-left: 10px;
+            background-color: green;
+            border-style: none;
+            color: white;
+        }
+        #box2
+        {
+            text-align: center;
+            border-style:none;
+            background-color: white;
+            height: 35px;
+            width: 510px;
+            border-radius: 25px;
+            margin-top: 10px;
+            margin-left: 5px;
+            padding-top: 5px;
+            float: left;
+        }
+
+        #d2 tr
+        {
+            padding: 10px;
+        }
+
+        #t1
+        {
+            color: white;
+            font-family: 'Quicksand', sans-serif;
+            font-size: medium;
+        }
+
+        select
+        {
+            height: 30px;
+            width: 200px;
+            margin:10px;
+            border-style: none;
+            text-align: center;
+        }
+
+        #op
+        {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="d1" align="center">
+        <h1> Welcome to the Staff Management Portal </h1>
+    </div>
+    <div id="d2">
+        <div id = "d3" align = "center">
+            <h1>Registration</h1>
+
+            <form method = "POST" action = "RegistrationBackend.php">
+                <table id = "t1">
+                    <tr>
+                        <td> <input id = "box1" type = "text" name = "fname" placeholder="Full Name"/> </td>
+                        <td>
+                            <input type= "text" name="email" id="box1" placeholder="Enter E-mail"/>
+                        </td>
+                    </tr>
+                        
+                    <tr>
+                        <td>
+                            <input id = "box1" type = "text" name = "mobno" placeholder="Mobile Number"/>
+                        </td>
+                        <td>
+                            <input type="password" name = "pwd" id = "box1" placeholder="Enter Password"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td align="center">
+                            Gender
+                        </td>
+                        <td colspan="3" align="center">                            
+                            <select id = "box1" name ="gdr" >
+                                <option id = "op">Male</option>
+                                <option id = "op">Female</option>
+                            </select>
+                        </td>                       
+                    </tr>
+
+                    <tr>
+                        <td align="center">
+                            Register as
+                        </td>
+                        <td colspan="3" align="center">                            
+                            <select id = "box1" name = "regtype" >
+                                <option> Self </option>
+                                <option> Group </option>
+                                <option> Corporate </option>
+                                <option> Others </option>
+                            </select>
+                        </td>
+                    </tr>
+                   
+                    <tr>
+                        <td align="center">
+                            No. of Tickets
+                        </td>
+
+                        <td>
+                            <input type="number" name = "tickets" id = "box1"/>
+                        </td>
+                        
+                    </tr>
+
+                    <tr>
+                        <td align="center">  Upload ID Proof  </td>
+
+                        <td> <input type = "file" accept="image/*" name = "idimage" enctype = "multipart/form-data" /> </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="3" align="center"><input type = "submit" value="Register" name="regbtn"> </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+
+        <div id = "d4" align = "center">
+            <h1>Sign In</h1>
+            <form method = "post" action = "Signin.php">
+                <table align="center">
+                    <tr>
+                        <td colspan="2" align="center"> <input id = "box1" type="text" name="username" placeholder="Username" /> </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center"> <input id = "box1" type="password" name="pwd" placeholder="Password" /> </td>
+                    </tr>
+                    <tr>
+                        <td align="center" > <input name = "staffbtn"  type="submit" value="Log In as Staff" /> </td>
+                        <td align="center" > <input name = "adminbtn"  type="submit" value="Log In as Admin"/> </td>
+                    </tr>
+                </table>
+            </form>
+			<a href="forgotpass.php">FORGOT PASSWORD</a>
+        </div>        
+    </div>
+
+</body>
+
+</html>

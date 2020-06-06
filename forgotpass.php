@@ -9,13 +9,13 @@ if($_POST['submit']=='Send')
 {
     //keep it inside
     $email=$_POST['email'];
-    $con=mysqli_connect("Localhost","root","","factory");
+    $con=mysqli_connect("Localhost","root","","stackhack");
     // Check connection
     if (mysqli_connect_errno())
     {
       echo "Failed to connect to MySQL: " . mysqli_connect_error();
     }
-    $query = mysqli_query($con,"select * from staff where email = '$email'")
+    $query = mysqli_query($con,"select * from participants where email = '$email'")
     or die(mysqli_error($con));
 
     if (mysqli_num_rows ($query)==1)
@@ -86,7 +86,7 @@ if($_POST['submit']=='Send')
                         <!-- Sign in button -->
                         <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit" name="submit" value="Send">Send Code To Mail</button>
                         <!-- Social login -->
-                        <a href="login.php">Sign in</a>
+                        <a href="Login.html">Sign in</a>
                         
                     </form>
                     <!-- Form -->
